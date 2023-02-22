@@ -26,9 +26,8 @@ function GetMovieDiv(props){
             <p>{props.description}</p>
             <p>{duration}</p>
             <p>{props.releaseDate}</p>
-            <a>
-                <img src={props.movieLink} height={"300"}/>
-            </a>
+            <img src={props.movieLink} height={"300"} alt={"NON REDUNDANT SHIT"}/>
+
             <hr/>
         </div>
     )
