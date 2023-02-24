@@ -12,12 +12,13 @@ pipeline {
             steps {
                 nodejs(nodeJSInstallationName: 'Node 19.7.0', configId: '<config-file-provider-id>') {
                                 sh 'npm ...'
-                            }
-                // Install project dependencies
-                sh 'npm install'
+                                // Install project dependencies
+                                sh 'npm install'
 
-                // Build the project
-                sh 'npm run build'
+                                // Build the project
+                                sh 'npm run build'
+                            }
+
             }
         }
 
