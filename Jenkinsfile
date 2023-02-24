@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                 nodejs(nodeJSInstallationName: 'Node 19.7.0', configId: 'MyNpmrcConfig') {
+                 nodejs(nodeJSInstallationName: 'Node 19.5.0', configId: 'MyNpmrcConfig') {
                     sh 'npm --version'
                  }
             }
