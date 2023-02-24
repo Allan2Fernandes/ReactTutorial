@@ -19,7 +19,7 @@ pipeline {
                     //}
 
             // Install project dependencies
-            sh 'npm install'
+            sh 'npm install
 
             // Build the project
             sh 'npm run build'
