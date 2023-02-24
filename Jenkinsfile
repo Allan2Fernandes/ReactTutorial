@@ -1,12 +1,27 @@
 node {
-    stage('Build') {
-                steps {
-                    env.NODEJS_HOME = "${tool 'Node 19.7.0'}"
-                    // on linux / mac
-                    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-                    // on windows
-                    env.PATH="${env.NODEJS_HOME};${env.PATH}"
-                    sh 'npm --version'
-                }
+    pipeline{
+        stage('Build') {
+                        steps {
+
+                            // Install project dependencies
+                            sh 'npm install'
+
+                        }
+            }
+
+        stage('Test') {
+                        steps {
+                            // Add test steps here
+                        }
+        }
+
+        stage('Deploy') {
+                        steps {
+                            // Add deployment steps here
+                        }
+        }
+
+    }
+
 
 }
