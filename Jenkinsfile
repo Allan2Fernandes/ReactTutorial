@@ -4,30 +4,30 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo "Checkout"
+                checkout scm
             }
         }
 
-
         stage('Build') {
             steps {
-                nodejs(nodeJSInstallationName: 'Node 19.7.0', configId: 'MyNpmrcConfig') {
+                 nodejs(nodeJSInstallationName: 'Node 19.7.0', configId: 'MyNpmrcConfig') {
                     sh 'npm --version'
-                }
+                 }
             }
         }
 
         stage('Test') {
             steps {
-                echo "test"
+                // Add test steps here
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploy"
+                // Add deployment steps here
             }
         }
+    }
+
+
 }
-
-
