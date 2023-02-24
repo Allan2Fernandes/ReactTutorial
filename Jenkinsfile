@@ -18,7 +18,9 @@ pipeline {
 //                     sh 'npm run build'
                     //}
 
-
+            // Install Node.js and npm
+           sh 'sudo -s Pear1234! curl -sL https://deb.nodesource.com/setup_14.x | bash -'
+           sh 'sudo -s Pear1234! apt-get install -y nodejs'
 
             // Check Node.js and npm versions
             sh 'node --version'
