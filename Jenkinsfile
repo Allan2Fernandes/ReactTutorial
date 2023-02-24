@@ -11,7 +11,6 @@ pipeline {
         stage('Build') {
             steps {
                 nodejs(nodeJSInstallationName: 'Node 19.7.0', configId: '<config-file-provider-id>') {
-                                sh 'npm ...'
                                 // Install project dependencies
                                 sh 'npm install'
 
